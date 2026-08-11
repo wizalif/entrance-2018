@@ -158,9 +158,9 @@
                 placeholder="WRITE HERE..."
             >
 
-            <button class="check">
-                ⌾ &nbsp; Check Result
-            </button>
+<button class="check" onclick="checkResult()">
+    ⌾ &nbsp; Check Result
+</button>
 
             <button class="response">
                 ▣ &nbsp; Compliant Response
@@ -170,5 +170,18 @@
 
     </div>
 
+    <script>
+function checkResult() {
+    const registration = document.querySelectorAll("input")[0].value;
+    const firstName = document.querySelectorAll("input")[1].value;
+
+    if (registration === "" || firstName === "") {
+        alert("Please enter your Registration Number and First Name.");
+        return;
+    }
+
+    alert("Result found for " + firstName + "!");
+}
+</script>
 </body>
 </html>
