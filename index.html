@@ -182,6 +182,65 @@ main{
 
     transition:.3s;
 }
+    /* VERIFICATION BOX */
+
+.verification{
+    width:100%;
+    height:62px;
+
+    margin-top:20px;
+
+    background:#303030;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 12px;
+
+    color:white;
+
+    border-radius:2px;
+
+    font-size:13px;
+}
+
+.verify-left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.verify-icon{
+    width:30px;
+    height:30px;
+
+    border-radius:50%;
+
+    background:#32c56b;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:20px;
+}
+
+.cloudflare{
+    text-align:right;
+    font-size:10px;
+    color:#ddd;
+}
+
+.cloudflare strong{
+    display:block;
+    font-size:12px;
+    letter-spacing:1px;
+}
+
+.cloudflare small{
+    font-size:8px;
+}
 
 #checkResult:hover{
     transform:translateY(-2px);
@@ -278,6 +337,30 @@ main{
         >
 
     </div>
+    <div class="verification">
+
+    <div class="verify-left">
+
+        <div class="verify-icon">
+            ✓
+        </div>
+
+        <span>Success!</span>
+
+    </div>
+
+
+    <div class="cloudflare">
+
+        <strong>CLOUDFLARE</strong>
+
+        <small>
+            Privacy • Help
+        </small>
+
+    </div>
+
+</div>
 
 
     <!-- CHECK RESULT BUTTON -->
