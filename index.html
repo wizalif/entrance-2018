@@ -374,6 +374,35 @@ main{
 </main>
 
 
+    <script>
+
+const checkButton = document.getElementById("checkResult");
+
+checkButton.addEventListener("click", function(){
+
+    const admission =
+        document.getElementById("admission").value.trim();
+
+    const firstname =
+        document.getElementById("firstname").value.trim();
+
+
+    if(admission === "" || firstname === ""){
+
+        alert("Please enter your Admission Number and First Name.");
+
+        return;
+
+    }
+
+
+    // Open the result page
+
+    window.location.href = "result.html";
+
+});
+
+</script>
 </body>
 
 </html>
