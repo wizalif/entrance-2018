@@ -1,187 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check Result</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            min-height: 100vh;
-            padding: 25px 5px;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .container {
-            max-width: 700px;
-            margin: auto;
-            background: white;
-            border: 2px solid #287c9f;
-            border-radius: 15px;
-            overflow: hidden;
-        }
+<title>Student Result | EAES</title>
 
-        .header {
-            background: #287c9f;
-            color: white;
-            padding: 55px 60px;
-        }
+<style>
 
-        .header h1 {
-            font-size: 38px;
-            font-weight: 500;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .form {
-            padding: 65px 60px 55px;
-        }
+body{
+    font-family:Arial, sans-serif;
+    background:#f1f5fb;
+    color:#26364a;
+}
 
-        label {
-            display: block;
-            font-size: 25px;
-            color: #222;
-            margin-bottom: 20px;
-        }
+/* HEADER */
 
-        input {
-            width: 100%;
-            height: 80px;
-            border: 2px solid #d6dce0;
-            border-radius: 14px;
-            padding: 0 45px;
-            font-size: 27px;
-            outline: none;
-            color: #287c9f;
-        }
+header{
+    height:78px;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 8%;
+    box-shadow:0 1px 5px rgba(0,0,0,.08);
+}
 
-        input:focus {
-            border-color: #287c9f;
-        }
+/* LOGO */
 
-        .forgot {
-            display: block;
-            margin-top: 18px;
-            margin-bottom: 85px;
-            color: #4d91ff;
-            font-size: 23px;
-            text-decoration: none;
-        }
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
 
-        button {
-            width: 100%;
-            height: 80px;
-            border: none;
-            border-radius: 14px;
-            color: white;
-            font-size: 26px;
-            cursor: pointer;
-            margin-top: 42px;
-        }
+.logo img{
+    width:155px;
+    height:auto;
+}
 
-        .check {
-            background: #287c9f;
-        }
+.logo-text{
+    color:#277a9c;
+    font-size:18px;
+    font-weight:bold;
+}
 
-        .response {
-            background: #079b70;
-        }
+/* NAVIGATION */
 
-        @media (max-width: 600px) {
+nav{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
 
-            .header {
-                padding: 40px 30px;
-            }
+nav a{
+    text-decoration:none;
+    color:#303a48;
+    font-size:14px;
+    font-weight:500;
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
 
-            .header h1 {
-                font-size: 30px;
-            }
+nav a:hover{
+    color:#087eb5;
+}
 
-            .form {
-                padding: 45px 30px;
-            }
+.home{
+    background:#17243a;
+    color:white !important;
+    padding:12px 18px;
+    border-radius:7px;
+}
 
-            label {
-                font-size: 21px;
-            }
+/* MAIN */
 
-            input {
-                height: 65px;
-                font-size: 21px;
-                padding: 0 25px;
-            }
+main{
+    min-height:calc(100vh - 78px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
 
-            .forgot {
-                font-size: 19px;
-                margin-bottom: 55px;
-            }
+/* RESULT CARD */
 
-            button {
-                height: 65px;
-                font-size: 21px;
-            }
-        }
-    </style>
+.result-card{
+    width:370px;
+    background:white;
+    border-radius:22px;
+    padding:35px;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+    text-align:center;
+}
+
+.result-card h1{
+    color:#126184;
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.result-card p{
+    color:#77808c;
+    font-size:15px;
+}
+
+</style>
+
 </head>
 
 <body>
 
-    <div class="container">
 
-        <div class="header">
-            <h1>Check Result</h1>
-        </div>
+<!-- HEADER -->
 
-        <div class="form">
+<header>
 
-            <label>Registration Number</label>
+    <div class="logo">
 
-            <input
-                type="text"
-                placeholder="XXXXXX"
-            >
+        <!-- Logo will be added in the next step -->
 
-            <a href="#" class="forgot">
-                Forgot admission number?
-            </a>
-
-            <label>First Name</label>
-
-            <input
-                type="text"
-                placeholder="WRITE HERE..."
-            >
-
-<button class="check" onclick="window.location.href='result.html'">
-    ⌾ &nbsp; Check Result
-</button>
-
-            <button class="response">
-                ▣ &nbsp; Compliant Response
-            </button>
-
+        <div class="logo-text">
+            Educational Assessment and<br>
+            Examinations Services
         </div>
 
     </div>
 
-    <script>
-function checkResult() {
-    const registration = document.querySelectorAll("input")[0].value;
-    const firstName = document.querySelectorAll("input")[1].value;
 
-    if (registration === "" || firstName === "") {
-        alert("Please enter your Registration Number and First Name.");
-        return;
-    }
+    <nav>
 
-    alert("Result found for " + firstName + "!");
-}
-</script>
+        <a href="#" class="home">
+            🏠 Home
+        </a>
+
+        <a href="#">
+            ☎️ SMS
+        </a>
+
+        <a href="#">
+            💬 Telegram
+        </a>
+
+        <a href="#">
+            📄 Complaint
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- MAIN CONTENT -->
+
+<main>
+
+    <div class="result-card">
+
+        <h1>Student Result</h1>
+
+        <p>
+            Enter credentials to view your exam results.
+        </p>
+
+    </div>
+
+</main>
+
+
 </body>
+
 </html>
