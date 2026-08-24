@@ -1,59 +1,516 @@
-<div class="result-title">
+<!DOCTYPE html>
+<html lang="en">
 
-            ESSLCE Result
+<head>
 
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ESSLCE Result</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#eef2f8;
+    min-height:100vh;
+    color:#26364d;
+}
+
+/* HEADER */
+
+.header{
+    height:78px;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 8%;
+    box-shadow:0 1px 5px rgba(0,0,0,.08);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-box{
+    font-size:35px;
+}
+
+.logo-text{
+    color:#17678a;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.nav{
+    display:flex;
+    gap:28px;
+    align-items:center;
+}
+
+.nav span{
+    font-size:14px;
+    color:#46505d;
+}
+
+.nav .active{
+    background:#17243a;
+    color:white;
+    padding:12px 18px;
+    border-radius:7px;
+}
+
+
+/* MAIN */
+
+.main{
+    width:92%;
+    max-width:920px;
+    margin:18px auto;
+    background:white;
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 8px 30px rgba(20,40,70,.12);
+}
+
+
+/* RESULT AREA */
+
+.result-area{
+    display:grid;
+    grid-template-columns:345px 1fr;
+    gap:30px;
+}
+
+
+/* STUDENT CARD */
+
+.student-card{
+    background:#202c41;
+    border-radius:15px;
+    padding:20px 22px;
+    color:white;
+    box-shadow:
+        0 0 25px rgba(0,160,255,.35),
+        0 12px 25px rgba(0,0,0,.18);
+}
+
+.photo{
+    width:130px;
+    height:130px;
+    object-fit:cover;
+    border-radius:50%;
+    display:block;
+    margin:0 auto 15px;
+
+    border:4px solid #35b9f5;
+}
+
+.student-card h2{
+    text-align:center;
+    font-size:24px;
+    margin-bottom:4px;
+}
+
+.stream{
+    text-align:center;
+    color:#8edcff;
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.line{
+    height:1px;
+    background:rgba(255,255,255,.15);
+    margin-bottom:18px;
+}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    margin:15px 0;
+    font-size:14px;
+}
+
+.info span:first-child{
+    color:#9ba9bc;
+}
+
+.info span:last-child{
+    color:white;
+}
+
+
+/* RIGHT SIDE */
+
+.result-content h1{
+    font-size:24px;
+    margin-bottom:16px;
+}
+
+.status-box{
+    min-height:215px;
+    border:1px solid #e2e7ef;
+    border-radius:8px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    padding:25px;
+}
+
+.document{
+    font-size:55px;
+    color:#9aa9bc;
+    margin-bottom:15px;
+}
+
+.status-box h2{
+    font-size:20px;
+    margin-bottom:18px;
+}
+
+.status-box p{
+    color:#667386;
+    font-size:15px;
+    line-height:1.6;
+    max-width:430px;
+}
+
+
+/* BUTTON AREA */
+
+.actions{
+    border-top:1px solid #e4e8ef;
+    margin-top:30px;
+    padding-top:22px;
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.btn{
+    border:1px solid #d5dce6;
+    background:white;
+    color:#27364b;
+
+    padding:14px 25px;
+
+    border-radius:9px;
+
+    font-weight:bold;
+    font-size:14px;
+
+    cursor:pointer;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.btn.dark{
+    background:#202c41;
+    color:white;
+    border-color:#202c41;
+}
+
+.btn.disabled{
+    background:#e7edf5;
+    color:#78879b;
+    border:none;
+}
+
+
+/* FOOTER */
+
+.footer{
+    margin-top:18px;
+    background:#202c41;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.footer p{
+    font-size:13px;
+    margin:7px;
+    color:#dce3ed;
+}
+
+.footer small{
+    color:#8996a8;
+}
+
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+    .header{
+        padding:0 20px;
+    }
+
+    .logo-text{
+        display:none;
+    }
+
+    .nav{
+        gap:10px;
+    }
+
+    .nav span{
+        display:none;
+    }
+
+    .nav .active{
+        display:block;
+    }
+
+    .main{
+        width:95%;
+        padding:18px;
+    }
+
+    .result-area{
+        grid-template-columns:1fr;
+    }
+
+    .student-card{
+        max-width:380px;
+        width:100%;
+        margin:auto;
+    }
+
+    .actions{
+        flex-wrap:wrap;
+    }
+
+    .btn{
+        flex:1;
+        min-width:140px;
+    }
+}
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <div class="logo-box">
+            🎓
         </div>
 
+        <div class="logo-text">
+            Educational Assessment and<br>
+            Examinations Services
+        </div>
 
-        <div class="status">
+    </div>
 
-            <div class="status-icon">
-                ⏳
-            </div>
+
+    <nav class="nav">
+
+        <span class="active">⌂ Home</span>
+
+        <span>☎ SMS</span>
+
+        <span>▣ Telegram</span>
+
+        <span>♧ Complaint</span>
+
+    </nav>
+
+</header>
+
+
+
+<!-- MAIN RESULT -->
+
+<main class="main">
+
+
+    <div class="result-area">
+
+
+        <!-- STUDENT PROFILE -->
+
+        <div class="student-card">
+
+            <!-- Change photo2.jpg to your student photo -->
+
+            <img
+                src="photo2.jpg"
+                class="photo"
+                alt="Student Photo"
+            >
 
 
             <h2>
-                Result Not Yet Released
+                ALIF MOHAMMED YUSUF
             </h2>
 
 
-            <p>
-                Your examination result has not
-                been released yet.
-                Please check again later.
-            </p>
+            <div class="stream">
+                FIT. ABAYNEH
+            </div>
 
+
+            <div class="line"></div>
+
+
+            <div class="info">
+
+                <span>Admission No:</span>
+
+                <span>00587121</span>
+
+            </div>
+
+
+            <div class="info">
+
+                <span>Stream:</span>
+
+                <span>Social Sc.</span>
+
+            </div>
+
+
+            <div class="info">
+
+                <span>Sex:</span>
+
+                <span>Male</span>
+
+            </div>
+
+
+            <div class="info">
+
+                <span>Age:</span>
+
+                <span>19</span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RESULT STATUS -->
+
+        <div class="result-content">
+
+            <h1>
+                ESSLCE Result
+            </h1>
+
+
+            <div class="status-box">
+
+                <div class="document">
+                    📄
+                </div>
+
+
+                <h2>
+                    Results Not Yet Released
+                </h2>
+
+
+                <p>
+                    Your details are correct, but the results
+                    are not available at this time.
+                    Please check back later.
+                </p>
+
+            </div>
 
         </div>
 
     </div>
 
 
-    <!-- BUTTONS -->
 
-    <div class="buttons">
+    <!-- ACTION BUTTONS -->
+
+    <div class="actions">
 
         <button
-            class="check"
-            onclick="location.href='index.html'">
-
-            🔄 Check Again
-
+            class="btn"
+            onclick="location.reload()"
+        >
+            ↻ &nbsp; Check Again
         </button>
 
 
         <button
-            class="print"
-            onclick="window.print()">
+            class="btn disabled"
+            disabled
+        >
+            Submission Window Closed
+        </button>
 
-            🖨️ Print Certificate
 
+        <button
+            class="btn"
+            onclick="alert('No complaints available.')"
+        >
+            ♧ &nbsp; My Complaints
+        </button>
+
+
+        <button
+            class="btn dark"
+            onclick="window.print()"
+        >
+            🖨 &nbsp; Print Certificate
         </button>
 
     </div>
 
 
-</div>
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <p>
+        © 2026 EAES ICT Teams. All Rights Reserved.
+    </p>
+
+    <small>
+        Educational Assessment and Examinations Service
+    </small>
+
+</footer>
 
 
 </body>
