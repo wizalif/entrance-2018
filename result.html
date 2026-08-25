@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ESSLCE Result</title>
+<title>ESSLCE Result - 2018 E.C.</title>
 
 <style>
 
@@ -18,294 +18,512 @@
 }
 
 body{
+
     font-family:Arial, sans-serif;
-    background:#eef2f8;
+
+    background:#f1f5fb;
+
+    color:#263449;
+
     min-height:100vh;
-    color:#26364d;
+
 }
 
-/* HEADER */
 
-.header{
-    height:78px;
+/* ================= HEADER ================= */
+
+header{
+
+    height:88px;
+
     background:white;
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
+
     padding:0 8%;
-    box-shadow:0 1px 5px rgba(0,0,0,.08);
+
+    border-bottom:1px solid #e2e7ef;
+
 }
+
+
+/* Logo */
 
 .logo{
+
     display:flex;
+
     align-items:center;
+
     gap:15px;
+
 }
 
-.logo-box{
-    font-size:35px;
+
+.logo img{
+
+    width:75px;
+
 }
+
 
 .logo-text{
-    color:#17678a;
+
+    color:#087aa8;
+
+    font-size:20px;
+
     font-weight:bold;
-    font-size:18px;
+
 }
 
-.nav{
+
+/* Navigation */
+
+nav{
+
     display:flex;
-    gap:28px;
-    align-items:center;
-}
 
-.nav span{
-    font-size:14px;
-    color:#46505d;
-}
+    gap:35px;
 
-.nav .active{
-    background:#17243a;
-    color:white;
-    padding:12px 18px;
-    border-radius:7px;
 }
 
 
-/* MAIN */
+nav a{
+
+    text-decoration:none;
+
+    color:#263449;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+
+/* ================= MAIN ================= */
 
 .main{
-    width:92%;
-    max-width:920px;
-    margin:18px auto;
+
+    width:90%;
+
+    max-width:1050px;
+
+    margin:25px auto;
+
     background:white;
+
     border-radius:25px;
-    padding:30px;
-    box-shadow:0 8px 30px rgba(20,40,70,.12);
+
+    padding:35px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+
 }
 
 
-/* RESULT AREA */
+/* Result layout */
 
-.result-area{
+.result{
+
     display:grid;
-    grid-template-columns:345px 1fr;
+
+    grid-template-columns:390px 1fr;
+
     gap:30px;
+
 }
 
 
-/* STUDENT CARD */
+/* ================= STUDENT CARD ================= */
 
 .student-card{
-    background:#202c41;
-    border-radius:15px;
-    padding:20px 22px;
+
+    background:#202d42;
+
+    border-radius:18px;
+
+    padding:25px;
+
     color:white;
+
     box-shadow:
-        0 0 25px rgba(0,160,255,.35),
-        0 12px 25px rgba(0,0,0,.18);
+
+    0 0 25px rgba(54,150,255,.35),
+
+    0 0 40px rgba(85,90,255,.2);
+
+    text-align:center;
+
 }
 
-.photo{
-    width:130px;
-    height:130px;
+
+/* Student photo */
+
+.student-photo{
+
+    width:145px;
+
+    height:145px;
+
     object-fit:cover;
-    border-radius:50%;
-    display:block;
-    margin:0 auto 15px;
 
-    border:4px solid #35b9f5;
+    border-radius:50%;
+
+    border:5px solid #32b9f2;
+
+    background:white;
+
 }
+
+
+/* Name */
 
 .student-card h2{
-    text-align:center;
+
+    margin-top:15px;
+
     font-size:24px;
-    margin-bottom:4px;
+
 }
 
-.stream{
-    text-align:center;
-    color:#8edcff;
-    font-size:14px;
-    margin-bottom:25px;
+
+/* University */
+
+.university{
+
+    color:#a9d7ed;
+
+    margin-top:5px;
+
+    font-size:16px;
+
 }
+
+
+/* Line */
 
 .line{
+
     height:1px;
-    background:rgba(255,255,255,.15);
-    margin-bottom:18px;
+
+    background:rgba(255,255,255,.2);
+
+    margin:25px 0 15px;
+
 }
+
+
+/* Student information */
 
 .info{
+
     display:flex;
+
     justify-content:space-between;
-    margin:15px 0;
-    font-size:14px;
+
+    margin:14px 0;
+
+    font-size:15px;
+
 }
+
 
 .info span:first-child{
-    color:#9ba9bc;
+
+    color:#9daabd;
+
 }
+
 
 .info span:last-child{
+
     color:white;
+
+    font-weight:600;
+
 }
 
 
-/* RIGHT SIDE */
+/* ================= TOTAL / AVG ================= */
 
-.result-content h1{
-    font-size:24px;
-    margin-bottom:16px;
+.stats{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+    margin-top:25px;
+
 }
 
-.status-box{
-    min-height:215px;
-    border:1px solid #e2e7ef;
-    border-radius:8px;
+
+.stat{
+
+    padding:14px 8px;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+        135deg,
+        #2687ed,
+        #1498d7
+    );
+
+}
+
+
+.stat:nth-child(2){
+
+    background:linear-gradient(
+        135deg,
+        #208ee9,
+        #16b6d8
+    );
+
+}
+
+
+.stat small{
+
+    display:block;
+
+    font-size:12px;
+
+    margin-bottom:5px;
+
+}
+
+
+.stat strong{
+
+    font-size:28px;
+
+}
+
+
+/* ================= RESULT ================= */
+
+.results h1{
+
+    font-size:26px;
+
+    margin-bottom:20px;
+
+}
+
+
+/* Subject */
+
+.subject{
 
     display:flex;
-    flex-direction:column;
-    justify-content:center;
+
     align-items:center;
 
-    text-align:center;
-    padding:25px;
-}
+    justify-content:space-between;
 
-.document{
-    font-size:55px;
-    color:#9aa9bc;
-    margin-bottom:15px;
-}
+    background:#fff;
 
-.status-box h2{
-    font-size:20px;
-    margin-bottom:18px;
-}
+    border:1px solid #e3e7ee;
 
-.status-box p{
-    color:#667386;
-    font-size:15px;
-    line-height:1.6;
-    max-width:430px;
+    border-radius:10px;
+
+    padding:15px;
+
+    margin-bottom:10px;
+
+    box-shadow:0 2px 5px rgba(0,0,0,.03);
+
 }
 
 
-/* BUTTON AREA */
+.subject-name{
 
-.actions{
-    border-top:1px solid #e4e8ef;
-    margin-top:30px;
-    padding-top:22px;
+    font-size:17px;
 
-    display:flex;
-    justify-content:center;
-    gap:15px;
+    font-weight:600;
+
 }
 
-.btn{
-    border:1px solid #d5dce6;
-    background:white;
-    color:#27364b;
 
-    padding:14px 25px;
+.mark{
+
+    background:#e5ebf3;
+
+    padding:9px 15px;
 
     border-radius:9px;
 
+    font-size:16px;
+
     font-weight:bold;
-    font-size:14px;
+
+}
+
+
+/* ================= BOTTOM BUTTONS ================= */
+
+.bottom{
+
+    border-top:1px solid #e5e7eb;
+
+    margin-top:35px;
+
+    padding-top:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+
+button{
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:9px;
+
+    font-size:15px;
+
+    font-weight:bold;
 
     cursor:pointer;
-    transition:.25s;
+
 }
 
-.btn:hover{
-    transform:translateY(-2px);
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+.check{
+
+    background:white;
+
+    border:1px solid #ccd5e1;
+
+    color:#263449;
+
 }
 
-.btn.dark{
-    background:#202c41;
+
+.complaint{
+
+    background:#e5ebf3;
+
+    color:#69778b;
+
+}
+
+
+.print{
+
+    background:#202d42;
+
     color:white;
-    border-color:#202c41;
-}
 
-.btn.disabled{
-    background:#e7edf5;
-    color:#78879b;
-    border:none;
 }
 
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
-.footer{
-    margin-top:18px;
-    background:#202c41;
+footer{
+
+    margin-top:30px;
+
+    background:#202d42;
     color:white;
+
     text-align:center;
+
     padding:25px;
+
 }
 
-.footer p{
-    font-size:13px;
+
+footer p{
+
     margin:7px;
-    color:#dce3ed;
+
+    color:#d7deea;
+
 }
 
-.footer small{
-    color:#8996a8;
-}
 
+/* ================= MOBILE ================= */
 
-/* MOBILE */
+@media(max-width:800px){
 
-@media(max-width:750px){
+    header{
 
-    .header{
         padding:0 20px;
+
     }
 
     .logo-text{
-        display:none;
+
+        font-size:14px;
+
     }
 
-    .nav{
+    nav{
+
         gap:10px;
+
     }
 
-    .nav span{
-        display:none;
-    }
+    nav a{
 
-    .nav .active{
-        display:block;
+        font-size:12px;
+
     }
 
     .main{
+
         width:95%;
-        padding:18px;
+
+        padding:20px;
+
     }
 
-    .result-area{
+    .result{
+
         grid-template-columns:1fr;
+
     }
 
     .student-card{
-        max-width:380px;
-        width:100%;
+
+        max-width:400px;
+
         margin:auto;
+
     }
 
-    .actions{
-        flex-wrap:wrap;
+    .bottom{
+
+        flex-direction:column;
+
     }
 
-    .btn{
-        flex:1;
-        min-width:140px;
+    button{
+
+        width:100%;
+
     }
+
 }
+
+
 </style>
 
 </head>
@@ -314,203 +532,323 @@ body{
 <body>
 
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 
-<header class="header">
+<header>
 
-    <div class="logo">
+<div class="logo">
 
-        <div class="logo-box">
-            🎓
-        </div>
+    <!-- If you have the EAES logo, replace logo.png -->
 
-        <div class="logo-text">
-            Educational Assessment and<br>
-            Examinations Services
-        </div>
+    <img src="logo.png" alt="EAES Logo">
+
+    <div class="logo-text">
+
+        Educational Assessment and<br>
+
+        Examinations Service
 
     </div>
 
+</div>
 
-    <nav class="nav">
 
-        <span class="active">⌂ Home</span>
+<nav>
 
-        <span>☎ SMS</span>
+    <a href="index.html">⌂ Home</a>
 
-        <span>▣ Telegram</span>
+    <a href="#">☎ SMS</a>
 
-        <span>♧ Complaint</span>
+    <a href="#">💬 Telegram</a>
 
-    </nav>
+    <a href="#">♧ Complaint</a>
+
+</nav>
 
 </header>
 
 
 
-<!-- MAIN RESULT -->
+<!-- ================= MAIN RESULT ================= -->
 
-<main class="main">
+<div class="main">
 
 
-    <div class="result-area">
+<div class="result">
 
 
-        <!-- STUDENT PROFILE -->
+<!-- ================= STUDENT CARD ================= -->
 
-        <div class="student-card">
+<div class="student-card">
 
-            <!-- Change photo2.jpg to your student photo -->
 
-            <img
-                src="student.jpg"
-                class="photo"
-                alt="Student Photo"
-            >
+<img src="photo.jpg"
+     class="student-photo"
+     alt="Student Photo">
 
 
-            <h2>
-                ALIF MOHAMMED YUSUF
-            </h2>
+<h2>
 
+ALIF MOHAMMED YUSUF
 
-            <div class="stream">
-                FIT. ABAYNEH
-            </div>
+</h2>
 
 
-            <div class="line"></div>
+<div class="university">
 
+FIT. ABAYNEH
 
-            <div class="info">
+</div>
 
-                <span>Admission No:</span>
 
-                <span>00587121</span>
+<div class="line"></div>
 
-            </div>
 
+<div class="info">
 
-            <div class="info">
+<span>Admission No:</span>
 
-                <span>Stream:</span>
+<span>00587121</span>
 
-                <span>Social Sc.</span>
+</div>
 
-            </div>
 
+<div class="info">
 
-            <div class="info">
+<span>Stream:</span>
 
-                <span>Sex:</span>
+<span>Social Sc.</span>
 
-                <span>Male</span>
+</div>
 
-            </div>
 
+<div class="info">
 
-            <div class="info">
+<span>Sex:</span>
 
-                <span>Age:</span>
+<span>MALE</span>
 
-                <span>19</span>
+</div>
 
-            </div>
 
-        </div>
+<div class="info">
 
+<span>Age:</span>
 
+<span>19</span>
 
-        <!-- RESULT STATUS -->
+</div>
 
-        <div class="result-content">
 
-            <h1>
-                ESSLCE Result
-            </h1>
 
+<!-- TOTAL + AVG -->
 
-            <div class="status-box">
+<div class="stats">
 
-                <div class="document">
-                    📄
-                </div>
 
+<div class="stat">
 
-                <h2>
-                    Results Not Yet Released
-                </h2>
+<small>TOTAL</small>
 
+<strong>312.75</strong>
 
-                <p>
-                    Your details are correct, but the results
-                    are not available at this time.
-                    Please check back later.
-                </p>
+</div>
 
-            </div>
 
-        </div>
+<div class="stat">
 
-    </div>
+<small>AVG</small>
 
+<strong>52.12</strong>
 
+</div>
 
-    <!-- ACTION BUTTONS -->
 
-    <div class="actions">
+</div>
 
-        <button
-            class="btn"
-            onclick="location.reload()"
-        >
-            ↻ &nbsp; Check Again
-        </button>
 
+</div>
 
-        <button
-            class="btn disabled"
-            disabled
-        >
-            Submission Window Closed
-        </button>
 
 
-        <button
-            class="btn"
-            onclick="alert('No complaints available.')"
-        >
-            ♧ &nbsp; My Complaints
-        </button>
+<!-- ================= SUBJECT RESULTS ================= -->
 
+<div class="results">
 
-        <button
-            class="btn dark"
-            onclick="window.print()"
-        >
-            🖨 &nbsp; Print Certificate
-        </button>
 
-    </div>
+<h1>
 
+ESSLCE Result - 2018 E.C.
 
-</main>
+</h1>
 
 
+<div class="subject">
 
-<!-- FOOTER -->
+<span class="subject-name">
 
-<footer class="footer">
+English
 
-    <p>
-        © 2026 EAES ICT Teams. All Rights Reserved.
-    </p>
+</span>
 
-    <small>
-        Educational Assessment and Examinations Service
-    </small>
+<span class="mark">
+
+51.00
+
+</span>
+
+</div>
+
+
+<div class="subject">
+
+<span class="subject-name">
+
+Mathematics
+
+</span>
+
+<span class="mark">
+
+53.00
+
+</span>
+
+</div>
+
+
+<div class="subject">
+
+<span class="subject-name">
+
+Scholastic Aptitude Test
+
+</span>
+
+<span class="mark">
+
+50.00
+
+</span>
+
+</div>
+
+
+<div class="subject">
+
+<span class="subject-name">
+
+Geography
+
+</span>
+
+<span class="mark">
+
+54.00
+
+</span>
+
+</div>
+
+
+<div class="subject">
+
+<span class="subject-name">
+
+History
+
+</span>
+
+<span class="mark">
+
+49.00
+
+</span>
+
+</div>
+
+
+<div class="subject">
+
+<span class="subject-name">
+
+Economics
+
+</span>
+
+<span class="mark">
+
+55.75
+
+</span>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<!-- ================= BUTTONS ================= -->
+
+<div class="bottom">
+
+
+<button
+class="check"
+onclick="location.href='index.html'">
+
+⟳ Check Again
+
+</button>
+
+
+<button
+class="complaint"
+disabled>
+
+Complaint Session Unavailable
+
+</button>
+
+
+<button
+class="print"
+onclick="window.print()">
+
+▣ Print Certificate
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 EAES ICT Teams. All Rights Reserved.
+
+</p>
+
+<p>
+
+Educational Assessment and Examinations Service
+
+</p>
 
 </footer>
+
 
 
 </body>
